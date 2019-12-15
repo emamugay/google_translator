@@ -1,21 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import pandas as pd
-import os, glob, sys, socket, urllib, math, time
-import requests, json, re, subprocess
-import pycurl
-from bs4 import BeautifulSoup
-import dateutil.parser
+import os
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import NoSuchElementException, NoSuchWindowException, TimeoutException, WebDriverException
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-import selenium.webdriver.support.ui as ui
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options
-#import xlwings as xw
-import csv
 path = os.path.dirname(os.path.realpath(__file__))
 
 from openpyxl import load_workbook
