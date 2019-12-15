@@ -27,6 +27,7 @@ def start_new_session():
     options = Options()
     options.headless = False
 
+    # Change the path to your geckodriver path
     DRIVER_PATH = "/mnt/Devs/Python/scrapy/mmi/driver/geckodriver"
     options.binary_location = "/usr/bin/firefox"
 
@@ -42,7 +43,8 @@ def process_file(file_src = ""):
     if file_src != "":
         files = file_src
     else:
-        files = '/home/edgar/Downloads/rica-docs/APAC_Chinese Posts.xlsx'
+        print('No file selected')
+        exit(1)
         
     wb = load_workbook(files)
     sheet = wb.active
