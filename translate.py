@@ -18,25 +18,10 @@ from selenium.webdriver.firefox.options import Options
 import csv
 path = os.path.dirname(os.path.realpath(__file__))
 
-from openpyxl import Workbook, load_workbook
+from openpyxl import load_workbook
 
 
 platform = sys.platform
-arg = sys.argv[1:]
-
-def printer(text):
-    print(text)
-    return
-
-def run_cmd(cmd):
-    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-    output = p.communicate()[0].split()
-    for n in output:
-        if 'addr:' in str(n):
-            output = n.replace('addr:','').strip()
-            break
-
-    return output
 
 def start_new_session():
     options = Options()
