@@ -2,5 +2,6 @@
 
 requirements:
 
-pip install selenium
+sudo apt-get install firefox, 
+pip install selenium, 
 pip install openpyxl
