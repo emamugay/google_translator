@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import pandas as pd
-import os
+import os, sys, time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options
@@ -33,6 +33,7 @@ def process_file(file_src = ""):
         files = file_src
     else:
         print('No file selected')
+        print('to translate, run python translate_prod.py <myfile.xlsx>')
         exit(1)
         
     wb = load_workbook(files)
