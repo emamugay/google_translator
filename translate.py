@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import pandas as pd
+
 import os, sys, time
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -132,4 +132,6 @@ if __name__ == "__main__":
     if len(sys.argv) >= 2:
         for file in sys.argv[1:]:
             process_file(file)
-    
+    else:
+        print('No file selected')
+        print('to translate, run python translate_prod.py <myfile.xlsx>')       
