@@ -3,14 +3,8 @@
 import pandas as pd
 import os, sys, time
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options
-path = os.path.dirname(os.path.realpath(__file__))
-
 from openpyxl import load_workbook
-
-
-platform = sys.platform
 
 def start_new_session():
     options = Options()
@@ -113,7 +107,7 @@ def SplitNumber(src):
     except BaseException as e:
         print("ERROR: "+str(e))
         
-
+# split content source into 300 words length 
 def SplitWords(src):
     try:
         
@@ -135,16 +129,7 @@ def SplitWords(src):
     
 
 if __name__ == "__main__":   
-    # with arguments
-    if len(sys.argv) == 2:
-        process_file(sys.argv[1])
-        exit(1)
-    
-    if len(sys.argv) >=3:
+    if len(sys.argv) >= 2:
         for file in sys.argv[1:]:
             process_file(file)
-        
-        exit(1)
-    # without argument    
-    process_file()
     
